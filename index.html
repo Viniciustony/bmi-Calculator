@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calcule seu IMC em segundos com uma ferramenta simples, rápida e intuitiva">
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="Vinicius Toni Moser">
+
+  <meta property="og:title" content="Calculadora de Índice de Massa Corporal (IMC)">
+  <meta property="og:description" content="Ferramenta gratuita para calcular seu IMC.">
+  <meta property="og:image" content="https://imc-saude.com/og-image.png">
+  <meta property="og:url" content="https://imc-saude.com">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/assets/Icon-IMC.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/icon-32px.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <title>Calculadora de IMC — Índice de Massa Corporal</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ══ HEADER ════════════════════════════════════════════ -->
+  <header class="site-header">
+    <div class="header-inner">
+
+      <a href="#" class="logo">
+        <div class="logo-icon">
+          <img src="/assets/Icon-IMC.png" alt="Ícone IMC Saúde">
+        </div>
+        <div class="logo-text">
+          <p class="logo-name">IMC</p>
+          <p class="logo-sub">Calculadora gratuita</p>
+        </div>
+      </a>
+
+      <nav aria-label="Navegação principal">
+        <ul class="nav-links">
+          <li><a href="#">Início</a></li>
+          <li><a href="#sobre">O que é IMC</a></li>
+           <li><a href="#faixas">Faixas de IMC</a></li>
+          <li><a href="#tabela">Tabela de Classificação</a></li>
+          <li><a href="#calculadora" class="nav-cta">Calcular agora</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- ══ HERO ══════════════════════════════════════════════ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <div class="hero-bg" role="img" aria-label="Pessoa praticando atividade física, representando saúde e bem-estar"></div>
+    <div class="hero-content fade-up">
+      <h1 id="hero-heading">Índice de <em>Massa</em> Corporal</h1>
+      <p class="hero-sub">Entenda o que seu IMC significa e tome decisões mais conscientes sobre sua saúde.</p>
+    </div>
+  </section>
+
+  <!-- ══ CONTEÚDO PRINCIPAL ════════════════════════════════ -->
+  <main>
+
+    <!-- ── O que é o IMC ─────────────────────────────────── -->
+    <section class="info-section fade-up-2" id="sobre" aria-labelledby="info-heading">
+      <h2 id="info-heading">O que é o IMC?</h2>
+
+      <p>
+        O <strong>Índice de Massa Corporal (IMC)</strong> é um dos indicadores utilizados pela Organização Mundial
+        da Saúde (OMS) para verificar o estado nutricional de adultos. É calculado a partir do peso
+        atual (em kg) dividido pelo quadrado da estatura (em metros). Apesar de amplamente utilizado
+        em triagens clínicas e pesquisas epidemiológicas, <strong> possui limitações importantes e não
+        deve ser interpretado isoladamente como diagnóstico de saúde.</strong>
+      </p>
+      <p>
+        A classificação para adultos segue a tabela da OMS, que define faixas de risco associadas
+        a condições como desnutrição, sobrepeso e diferentes graus de obesidade. Para crianças e
+        adolescentes, a avaliação obedece a critérios específicos por idade e sexo, <strong>não cobertos
+        por esta ferramenta.</strong>
+      </p>
+    </section>
+
+    <!-- ── Faixas de IMC ──────────────────────────────────── -->
+    <section class="faixas-section" id="faixas" aria-labelledby="faixas-heading">
+      <h2 class="section-heading" id="faixas-heading">O que significa cada faixa?</h2>
+
+      <div class="faixas-grid">
+
+        <!-- Abaixo do peso -->
+        <article class="faixa-card" data-faixa="underweight">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--underweight" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Abaixo do peso</h3>
+              <span class="faixa-card__range">IMC &lt; 18,5</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Indica que o peso está abaixo do mínimo considerado saudável para a altura.
+            Pode ser resultado de desnutrição, distúrbios alimentares ou condições médicas
+            não tratadas.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Riscos associados</p>
+            <ul>
+              <li>Deficiências nutricionais e anemia</li>
+              <li>Sistema imunológico enfraquecido</li>
+              <li>Perda de massa muscular e óssea</li>
+              <li>Fadiga crônica e dificuldade de concentração</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Peso normal -->
+        <article class="faixa-card" data-faixa="normal">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--normal" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Peso normal</h3>
+              <span class="faixa-card__range">IMC 18,5 – 24,9</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Faixa considerada saudável pela OMS para a maioria dos adultos. Indica equilíbrio
+            entre peso e altura, reduzindo o risco de doenças associadas ao sobrepeso
+            ou à desnutrição.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Como manter</p>
+            <ul>
+              <li>Alimentação equilibrada e variada</li>
+              <li>Atividade física regular (150 min/semana)</li>
+              <li>Acompanhamento médico periódico</li>
+              <li>Sono de qualidade e gestão do estresse</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Sobrepeso -->
+        <article class="faixa-card" data-faixa="overweight">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--overweight" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Sobrepeso</h3>
+              <span class="faixa-card__range">IMC 25,0 – 29,9</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Sinal de alerta: o peso está acima do ideal, mas ainda não configura obesidade.
+            Mudanças de hábito nesta fase são mais eficazes e previnem a progressão
+            para faixas de risco mais elevado.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Riscos associados</p>
+            <ul>
+              <li>Pressão arterial elevada</li>
+              <li>Risco aumentado de diabetes tipo 2</li>
+              <li>Problemas articulares e dores crônicas</li>
+              <li>Apneia do sono</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Obesidade Grau I -->
+        <article class="faixa-card" data-faixa="obese1">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--obese1" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Obesidade Grau I</h3>
+              <span class="faixa-card__range">IMC 30,0 – 34,9</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Primeiro estágio da obesidade clínica. O excesso de gordura corporal já representa
+            risco concreto à saúde cardiovascular e metabólica, exigindo acompanhamento
+            médico e mudanças estruturadas no estilo de vida.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Riscos associados</p>
+            <ul>
+              <li>Diabetes tipo 2 e resistência à insulina</li>
+              <li>Doenças cardiovasculares</li>
+              <li>Colesterol e triglicerídeos elevados</li>
+              <li>Refluxo gastroesofágico</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Obesidade Grau II -->
+        <article class="faixa-card" data-faixa="obese2">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--obese2" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Obesidade Grau II</h3>
+              <span class="faixa-card__range">IMC 35,0 – 39,9</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Obesidade severa com risco muito elevado. Neste estágio, o impacto na saúde é
+            significativo em múltiplos sistemas do organismo. Intervenção médica especializada
+            é fortemente recomendada.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Riscos associados</p>
+            <ul>
+              <li>Alto risco de infarto e AVC</li>
+              <li>Insuficiência cardíaca e respiratória</li>
+              <li>Problemas graves de mobilidade</li>
+              <li>Depressão e ansiedade associadas</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Obesidade Grau III -->
+        <article class="faixa-card" data-faixa="obese3">
+          <div class="faixa-card__header">
+            <span class="faixa-card__dot dot--obese3" aria-hidden="true"></span>
+            <div>
+              <h3 class="faixa-card__title">Obesidade Grau III</h3>
+              <span class="faixa-card__range">IMC ≥ 40,0</span>
+            </div>
+          </div>
+          <p class="faixa-card__desc">
+            Também chamada de obesidade mórbida. Representa risco extremo à vida e está
+            associada a comorbidades graves. Requer acompanhamento multidisciplinar
+            e pode indicar cirurgia bariátrica.
+          </p>
+          <div class="faixa-card__riscos">
+            <p class="faixa-card__riscos-title">Riscos associados</p>
+            <ul>
+              <li>Risco de morte prematura elevado</li>
+              <li>Falência de múltiplos órgãos</li>
+              <li>Trombose e embolia pulmonar</li>
+              <li>Impossibilidade de atividades básicas</li>
+            </ul>
+          </div>
+        </article>
+
+      </div><!-- /.faixas-grid -->
+    </section>
+
+    <!-- ── Tabela OMS ──────────────────────────────────────── -->
+    <section class="table-section" id="tabela" aria-labelledby="table-heading">
+      <h2 class="section-heading" id="table-heading">Tabela de classificação (OMS)</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Classificação</th>
+              <th>Faixa de IMC</th>
+              <th>Nível de risco</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="dot dot--underweight" aria-hidden="true"></span>Abaixo do peso</td>
+              <td>&lt; 18,5</td>
+              <td><span class="risk-badge">Baixo (outros riscos associados)</span></td>
+            </tr>
+            <tr>
+              <td><span class="dot dot--normal" aria-hidden="true"></span>Peso normal</td>
+              <td>18,5 – 24,9</td>
+              <td><span class="risk-badge">Normal</span></td>
+            </tr>
+            <tr>
+              <td><span class="dot dot--overweight" aria-hidden="true"></span>Sobrepeso</td>
+              <td>25,0 – 29,9</td>
+              <td><span class="risk-badge">Aumentado</span></td>
+            </tr>
+            <tr>
+              <td><span class="dot dot--obese1" aria-hidden="true"></span>Obesidade Grau I</td>
+              <td>30,0 – 34,9</td>
+              <td><span class="risk-badge">Alto</span></td>
+            </tr>
+            <tr>
+              <td><span class="dot dot--obese2" aria-hidden="true"></span>Obesidade Grau II</td>
+              <td>35,0 – 39,9</td>
+              <td><span class="risk-badge">Muito alto</span></td>
+            </tr>
+            <tr>
+              <td><span class="dot dot--obese3" aria-hidden="true"></span>Obesidade Grau III</td>
+              <td>≥ 40,0</td>
+              <td><span class="risk-badge">Extremamente alto</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ── Calculadora ────────────────────────────────────── -->
+    <section class="calc-section fade-up-3" id="calculadora" aria-labelledby="calc-heading">
+      <h2 class="section-heading" id="calc-heading">Calculadora de IMC</h2>
+
+      <div class="calc-card">
+
+        <form id="imc-form" novalidate>
+          <fieldset>
+            <legend class="sr-only">Dados para cálculo do IMC</legend>
+            <div class="form-side">
+              <p class="side-label">Seus dados</p>
+
+              <div class="field">
+                <label for="altura">
+                  <span class="req" aria-hidden="true">*</span> Altura
+                </label>
+                <div class="input-wrap">
+                  <input type="number" id="altura" placeholder="Ex: 175"
+                    min="50" max="250" step="0.1" required
+                    aria-describedby="altura-err">
+                  <span class="input-unit" aria-hidden="true">cm</span>
+                </div>
+                <div class="field-err" id="altura-err" role="alert"></div>
+              </div>
+
+              <div class="field">
+                <label for="peso">
+                  <span class="req" aria-hidden="true">*</span> Peso
+                </label>
+                <div class="input-wrap">
+                  <input type="number" id="peso" placeholder="Ex: 70"
+                    min="1" max="500" step="0.1" required
+                    aria-describedby="peso-err">
+                  <span class="input-unit" aria-hidden="true">kg</span>
+                </div>
+                <div class="field-err" id="peso-err" role="alert"></div>
+              </div>
+
+              <button type="submit" class="calc-btn">Calcular IMC</button>
+
+              <div class="note">
+                <svg width="14" height="14" fill="none" viewBox="0 0 16 16" aria-hidden="true">
+                  <circle cx="8" cy="8" r="7" stroke="#9C9690" stroke-width="1"/>
+                  <path d="M8 7v4M8 5.5v.5" stroke="#9C9690" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+                <span>
+                  Os valores devem ser arredondados para melhor precisão.
+                  Esta ferramenta não substitui avaliação médica profissional.
+                </span>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+
+        <div class="result-side">
+          <p class="side-label">Resultado</p>
+
+          <div class="result-value-area">
+            <div class="result-number" id="result-number" aria-live="polite">—</div>
+            <div class="result-class" id="result-class">Aguardando dados</div>
+          </div>
+
+          <div class="gauge" aria-hidden="true">
+            <div class="gauge-bar">
+              <div class="gseg g0" id="seg0"></div>
+              <div class="gseg g1" id="seg1"></div>
+              <div class="gseg g2" id="seg2"></div>
+              <div class="gseg g3" id="seg3"></div>
+              <div class="gseg g4" id="seg4"></div>
+            </div>
+            <div class="gauge-row">
+              <div class="glbl" id="lbl0">Abaixo do peso<span>&lt; 18,5</span></div>
+              <div class="glbl" id="lbl1">Peso normal<span>18,5 – 24,9</span></div>
+              <div class="glbl" id="lbl2">Sobrepeso<span>25,0 – 29,9</span></div>
+              <div class="glbl" id="lbl3">Obesidade<span>30,0 – 39,9</span></div>
+              <div class="glbl" id="lbl4">Ob. grave<span>&gt; 40</span></div>
+            </div>
+          </div>
+
+          <div class="formula">
+            O IMC é calculado dividindo o peso (kg) pela altura ao quadrado (m²).<br>
+            <strong>IMC = peso ÷ (altura × altura)</strong>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      <strong>IMC Saúde</strong> · Classificação baseada na tabela oficial da OMS ·
+      Ferramenta gratuita para uso educacional
+    </p>
+    <nav aria-label="Links legais">
+      <a href="/privacidade">Política de Privacidade</a> |
+      <a href="/termos">Termos de Uso</a> |
+      <a href="/contato">Contato</a>
+    </nav>
+  </footer>
+
+  <noscript>
+    <div style="padding:20px;background:#fff3cd;border:1px solid #ffc107;border-radius:8px;margin:20px;text-align:center;">
+      <strong>⚠️ JavaScript Desativado</strong>
+      <p>Esta calculadora requer JavaScript ativado para funcionar.</p>
+    </div>
+  </noscript>
+
+  <script src="script.js"></script>
+</body>
+</html>
